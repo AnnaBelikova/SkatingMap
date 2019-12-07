@@ -1,0 +1,56 @@
+$title-color:blue;
+$background-dark:blue;
+$background-pale:lightblue;
+
+.navbar-back{
+    background-color: white;
+}
+body{
+    padding:100px 0px 0px 0px;
+    z-index:0;
+}
+.title{
+    font-size:80px;
+    font-family:'Impact';
+    color:$title-color;
+    text-align:center;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.map{
+    background-color:gray;
+    height:80vh;
+}
+ h2{
+     color:$title-color;
+     margin-bottom:20px;
+ }
+ .row-content{
+    border-bottom: 1px ridge;
+    min-height:400px;
+}
+.block{
+    background-color:lightskyblue;
+    height:50%;
+    border-radius:15px;
+}
+.buttonDir{
+    text-align: center;
+    margin-bottom:20px;
+}
+.container{
+    max-width: 1800px;
+}
+
+.modal{
+    .modal-header{
+        background: $background-dark;
+        color:floralwhite;
+        .close{
+            color:floralwhite;
+        }
+    }
+    .modal-body{
+        background: $background-pale;
+    }
+}
