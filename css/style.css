@@ -2,6 +2,12 @@
   background-color: white;
 }
 
+.navbar-brand {
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+}
+
 body {
   padding: 100px 0px 0px 0px;
   z-index: 0;
@@ -9,21 +15,60 @@ body {
 
 .title {
   font-size: 80px;
-  font-family: 'Impact';
-  color: blue;
+  font-family: 'Arial';
+  font-weight: bold;
+  color: darkblue;
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 70px;
+  line-height: 0;
 }
 
 .map {
   background-color: gray;
   height: 80vh;
+  margin-bottom: 20px;
+}
+
+#basicMap {
+  margin-bottom: 20px !important;
+}
+
+.map_points {
+  background-color: grey;
+}
+
+.news__page {
+  background-color: lightgray;
+  height: 80vh;
+  padding-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px !important;
+}
+
+.route__page {
+  background-color: lightgray;
+  height: 80vh;
+  padding-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.news__page_title {
+  color: darkblue;
+  font-size: 50px;
+  line-height: 0;
+  font-weight: bold;
+}
+
+.buttonNews {
+  margin-bottom: 10px;
 }
 
 h2 {
-  color: blue;
+  color: darkblue;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .row-content {
@@ -33,7 +78,7 @@ h2 {
 
 .block {
   background-color: lightskyblue;
-  height: 50%;
+  height: 70%;
   border-radius: 15px;
 }
 
@@ -46,8 +91,13 @@ h2 {
   max-width: 1800px;
 }
 
+.modal .modal-content {
+  width: 20vw;
+  margin: 0 auto;
+}
+
 .modal .modal-header {
-  background: blue;
+  background: #007bff;
   color: floralwhite;
 }
 
@@ -56,6 +106,125 @@ h2 {
 }
 
 .modal .modal-body {
-  background: lightblue;
+  background: #E0FFFF;
+}
+
+.modal .modal-body .form_label {
+  font-size: 20px;
+  font-family: 'Arial';
+  color: darkblue;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.news .news__block {
+  padding-top: 20px;
+  margin-bottom: 15px;
+}
+
+.news .news__block .news__date {
+  background-color: #E0FFFF;
+  max-height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.news .news__block .news__message {
+  background-color: #E0FFFF;
+  border-radius: 5px;
+}
+
+.news .news__block .news__message .news_name {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.news .news__block .news__message .message {
+  font-size: 12px;
+}
+
+.chat .chat__block {
+  padding-top: 20px;
+}
+
+.chat .chat__block .message__block {
+  height: 90%;
+}
+
+.chat .chat__block .chat__time {
+  background-color: #E0FFFF;
+  max-height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0;
+}
+
+.chat .chat__block .chat__message {
+  background-color: #E0FFFF;
+  border-radius: 5px;
+}
+
+.chat .chat__block .chat__message .chat_name {
+  font-weight: bold;
+}
+
+.chat .chat__block .chat__message .message {
+  font-size: 12px;
+}
+
+.news__article {
+  background-color: #E0FFFF;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.news__article .article__name {
+  font-weight: bold;
+  color: darkblue;
+}
+
+.news__article .article__text {
+  font-size: 14px;
+  color: darkblue;
+}
+
+.route__descr {
+  background-color: #E0FFFF;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.route__descr .route__name {
+  font-weight: bold;
+  color: darkblue;
+}
+
+.route__descr .route__name .level {
+  padding-left: 40px;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.route__descr .route__description {
+  font-size: 14px;
+  color: darkblue;
+}
+
+.route_level_form {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.loginLink {
+  padding-right: 20px;
+  color: darkblue;
+}
+
+.form-check {
+  padding: 0;
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=style.css.map */

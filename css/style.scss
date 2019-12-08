@@ -1,9 +1,15 @@
-$title-color:blue;
-$background-dark:blue;
-$background-pale:lightblue;
+$title-color:darkblue;
+$background-dark:#007bff;
+$background-pale:#E0FFFF;
 
 .navbar-back{
     background-color: white;
+}
+.navbar-brand{
+    font-weight:bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:30px;
+    
 }
 body{
     padding:100px 0px 0px 0px;
@@ -11,19 +17,55 @@ body{
 }
 .title{
     font-size:80px;
-    font-family:'Impact';
+    font-family:'Arial';
+    font-weight:bold;
     color:$title-color;
     text-align:center;
-    margin-top:20px;
-    margin-bottom:20px;
+    margin-top:40px;
+    margin-bottom:70px;
+    line-height:0;
+   
 }
 .map{
     background-color:gray;
     height:80vh;
+    margin-bottom:20px;
+}
+
+#basicMap{
+    margin-bottom:20px !important;
+}
+.map_points{
+    background-color: grey;
+}
+.news__page{
+    background-color:lightgray;
+    height:80vh;
+    padding-top:10px;
+    margin-top:20px;
+    margin-bottom: 20px !important;
+}
+.route__page{
+    background-color:lightgray;
+    height:80vh;
+    padding-top:10px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.news__page_title{
+    color:$title-color;
+    font-size:50px;
+    
+    line-height:0;
+    font-weight:bold;
+}
+.buttonNews{
+    margin-bottom:10px;
 }
  h2{
      color:$title-color;
      margin-bottom:20px;
+     font-weight:bold;
  }
  .row-content{
     border-bottom: 1px ridge;
@@ -31,7 +73,7 @@ body{
 }
 .block{
     background-color:lightskyblue;
-    height:50%;
+    height:70%;
     border-radius:15px;
 }
 .buttonDir{
@@ -43,6 +85,11 @@ body{
 }
 
 .modal{
+    .modal-content{
+        width:20vw;
+        margin: 0 auto;
+    }
+
     .modal-header{
         background: $background-dark;
         color:floralwhite;
@@ -52,5 +99,117 @@ body{
     }
     .modal-body{
         background: $background-pale;
+        .form_label{
+            font-size:20px;
+            font-family:'Arial';
+            color:$title-color;
+            line-height:1;
+            font-weight:bold;
+
+        }
     }
+}
+.news{
+    
+    .news__block{
+        padding-top:20px;
+        margin-bottom:15px;
+        .news__date{
+            background-color: $background-pale;
+            max-height:30px;
+            border-radius:5px;
+            text-align: center;
+            margin-bottom:5px;
+        }
+        .news__message{
+            background-color: $background-pale;
+            border-radius:5px;
+            
+            .news_name{
+                font-weight:bold;
+                font-size: 12px;
+            }
+            .message{
+                font-size: 12px;
+            }
+        }
+    }
+}
+.chat{
+    
+    .chat__block{
+        padding-top:20px;
+        .message__block{
+            height:90%;
+        }
+        .chat__time{
+            background-color: $background-pale;
+            max-height:30px;
+            border-radius:5px;
+            text-align: center;
+            padding: 0;
+        }
+        .chat__message{
+            background-color: $background-pale;
+            border-radius:5px;
+            .chat_name{
+                font-weight:bold;
+            }
+            .message{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+.news__article{
+    background-color: $background-pale;
+    margin:10px;
+    padding:10px;
+    border-radius: 15px;
+    .article__name{
+        font-weight: bold;
+        color:$title-color;
+    }
+    .article__text{
+        font-size:14px;
+        color:$title-color;
+    }
+}
+
+.route__descr{
+    background-color: $background-pale;
+    margin:10px;
+    padding:10px;
+    border-radius: 15px;
+    .route__name{
+        font-weight: bold;
+        color:$title-color;
+        .level{
+            padding-left:40px;
+            font-size:14px;
+            font-weight: 100;
+        }
+    }
+    .route__description{
+        font-size:14px;
+        color:$title-color;
+    }
+    
+}
+.route_level_form{
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.loginLink{
+    padding-right:20px;
+    color:$title-color;
+    
+    
+}
+.form-check{
+    padding:0;
+    margin-bottom:10px;
 }

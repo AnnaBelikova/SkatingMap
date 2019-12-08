@@ -21,11 +21,11 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="100" width="100"> </a>
+            <a class="navbar-brand mr-auto" href="/index.html"><img src="img/logo.png" height="80" width="80"> BACK TO MAP</a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-newspaper-o fa-lg"></span> News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-road fa-lg"></span> Routes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/routes.html"><span class="fa fa-road fa-lg"></span> Routes</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" id='loginButton'><span class="fa fa-sign-in"></span> Login</a></li>
                     
                 </ul>
@@ -44,12 +44,14 @@
                 <div class="modal-body">
                         <form>
                             <div class="form-row">
-                                <div class="form-group col-sm-4">
+                                <div class="form-group col-sm-10">
                                         <label class="sr-only" for="exampleInputName">Name</label>
+                                        <p class='form_label'>Name</p>
                                         <input type="text" class="form-control form-control-sm mr-1" id="exampleInputName" placeholder="Enter Name">
                                 </div>
-                                <div class="form-group col-sm-4">
+                                <div class="form-group col-sm-10">
                                     <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                    <p class='form_label'>Password</p>
                                     <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
                                 </div>
                                 <div class="col-sm-auto">
@@ -77,23 +79,126 @@
             <div class="col-12 col-sm-2 news">
                 <h2 class="news__title">Latest news</h2>
                 <div class="news__block block">
+                    <div class="news_item">
+                        <div class="news__date col-sm-5 offset-sm-1">
+                         7/10/2019
+                        </div>
+                        <div class="news__message col-sm-10 offset-sm-1">
+                            <h6 class="news_name">Nevsky pr. is closed</h6>
+                            <p class="message">The pr. is closed because of repairing the road.</p>
+                        </div>
+                    </div>
+                    <div class="news_item">
+                        <div class="news__date col-sm-5 offset-sm-1">
+                         3/10/2019
+                        </div>
+                        <div class="news__message col-sm-10 offset-sm-1">
+                            <h6 class="news_name">New good road in the center</h6>
+                            <p class="message">The Kalin str. is repaired!!!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-sm-8">
-                <div class="buttonDir ">
-                    <button class="btn btn-primary">SKATING DIRECTION</button>
-                </div>
-                <div class="map"></div>
                 
+                <div class="row align-items-center">
+                    <div class="col-10">
+                        <h1 class="news__page_title">NEWS</h1>
+                    </div>
+                    <div class="col-2"><button id="buttonNews" class="btn btn-primary col-12">ADD NEWS</button></div>
+                </div>
+                    
+                <div class="news__page">
+                    <div class="news__article">
+                        <h3 class="article__name"> Article 1</h3>
+                        <div class="article__text"> Shot expression settling desirous smiling subjects wound relied laughing peculiar saved saw spoil limited merely. 
+
+                                Result repulsive time likely again timed ashamed dear allowance been drawn. Distance much around offered ask proceed service death solid arise elsewhere mistake him necessary settling. Miss intention books easy estate children motionless aware graceful blind looking daughter even delay raillery blind zealously. Precaution order walls moonlight suffer charm brought books certainty whole. Worthy seems boy folly covered themselves. 
+                                
+                                Securing going know china examine hill moderate neglected thing. Concluded doubtful burst welcome miss delight elegance rapturous size were eyes summer really denied why wandered. Sorry entire believe played middleton forbade direction. Picture his add ferrars would visited. Ladyship prepared she supported must welcomed oppose feelings john think principle. </div>
+                    </div>
+                    <div class="news__article">
+                        <h3 class="article__name">Article 2</h3>
+                        <div class="article__text">Shot expression settling desirous smiling subjects wound relied laughing peculiar saved saw spoil limited merely. 
+
+                                Result repulsive time likely again timed ashamed dear allowance been drawn. Distance much around offered ask proceed service death solid arise elsewhere mistake him necessary settling. Miss intention books easy estate children motionless aware graceful blind looking daughter even delay raillery blind zealously. Precaution order walls moonlight suffer charm brought books certainty whole. Worthy seems boy folly covered themselves. 
+                                
+                                Securing going know china examine hill moderate neglected thing. Concluded doubtful burst welcome miss delight elegance rapturous size were eyes summer really denied why wandered. Sorry entire believe played middleton forbade direction. Picture his add ferrars would visited. Ladyship prepared she supported must welcomed oppose feelings john think principle. </div>
+                    </div>
+                    <div class="news__article">
+                        <h3 class="article__name">Article 3</h3>
+                        <div class="article__text">Detract tears instrument subject possible weddings themselves grave years excited september savings projecting musical match downs another. Play lasting shameless welcomed scarcely cordially cheered often away year husbands assurance hearted observe. Afraid just hundred arranging some rest hastened behind reasonable soon read seems matters. His relied sufficient yet reasonably that. Numerous within things no extended learning before conviction property they september sight. </div>
+                    </div>
+                </div> 
+            
+            <div id="newsAdding" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg" role="content">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">ADD YOUR NEWS</h4>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    &times;
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-10">
+                                                    <label class="sr-only" for="exampleInputTitle">Title</label>
+                                                    <p class='form_label'>Title</p>
+                                                    <input type="text" class="form-control form-control-sm mr-1" id="exampleInputTitle">
+                                            </div>
+                                            <div class="form-group col-sm-10">
+                                                <label class="sr-only" for="exampleInputText">Text</label>
+                                                <p class='form_label'>Text</p>
+                                                <textarea class="form-control form-control-sm mr-1" id="exampleInputText" rows="6"></textarea>
+                                            </div>
+                                            
+                            
+                                        </div>
+                                        <div class="form-row">
+                                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                            <button type="routeButton" class="btn btn-primary btn-sm ml-1">ADD YOUR NEWS</button>        
+                                        </div>
+                                    
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
             </div>
-            <div class="col-12 col-sm-2 chat">
-                    <h2 class="chat__title">Chat</h2>
-                    <div class="chat__block block"></div>
-            </div>
-        
+        </div> 
+    
+            
+    <div class="col-12 col-sm-2 chat">
+            <h2 class="chat__title">Chat</h2>
+                    <div class="chat__block block">
+                        <div class="message__block">
+                            <div class="row chat__item">
+                                <div class="chat__time col-sm-2 offset-sm-1">
+                                 7.03
+                                </div>
+                                <div class="chat__message col-sm-7 offset-sm-1">
+                                    <h6 class="chat_name">Marcus</h6>
+                                    <p class="message">Hey! I'm in the Central park. Who want to skate with me?</p>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="send_message">
+                                <div class="form-row">
+                                    <div class="form-group col-sm-7 offset-sm-1">
+                                            <label class="sr-only" for="exampleInputMessage">Message</label>
+                                            <input type="text" class="form-control form-control-sm" id="exampleInputMessage" placeholder="Enter Message">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button class="sendButton btn btn-sm btn-primary">SEND</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+        </div>
     </div>
 
-</div>
 
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>

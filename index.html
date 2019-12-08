@@ -15,17 +15,17 @@
         
     <title>Saint-Petersburg Skater’s Map </title>
 </head>
-<body>
+<body onload="init();">
     <nav class="navbar navbar-back navbar-expand-sm fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="100" width="100"> </a>
+            <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="80" width="80"> </a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-newspaper-o fa-lg"></span> News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-road fa-lg"></span> Routes</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="/news.html"><span class="fa fa-newspaper-o fa-lg"></span> News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/routes.html"><span class="fa fa-road fa-lg"></span> Routes</a></li>
                     <li class="nav-item"><a class="nav-link" href="#" id='loginButton'><span class="fa fa-sign-in"></span> Login</a></li>
                     
                 </ul>
@@ -44,19 +44,21 @@
                 <div class="modal-body">
                         <form>
                             <div class="form-row">
-                                <div class="form-group col-sm-4">
+                                <div class="form-group col-sm-10">
                                         <label class="sr-only" for="exampleInputName">Name</label>
+                                        <p class='form_label'>Name</p>
                                         <input type="text" class="form-control form-control-sm mr-1" id="exampleInputName" placeholder="Enter Name">
                                 </div>
-                                <div class="form-group col-sm-4">
+                                <div class="form-group col-sm-10">
                                     <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                    <p class='form_label'>Password</p>
                                     <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
                                 </div>
-                                <div class="col-sm-auto">
+                                <div class="col-sm-12">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox">
-                                        <label class="form-check-label"> Remember me
-                                        </label>
+                                        
+                                        <a class="loginLink" href="#" id="passwordLink">I forget my password</a>
+                                        <a class="loginLink" href="#" id="regLink">Need a registration</a>
                                     </div>
                                 </div>
                             </div>
@@ -69,6 +71,93 @@
             </div>
         </div>
     </div>
+
+
+    <div id="regModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Registration</h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-sm-10">
+                                            <label class="sr-only" for="exampleInputName">Name</label>
+                                            <p class='form_label'>Name</p>
+                                            <input type="text" class="form-control form-control-sm mr-1" id="exampleInputName" placeholder="Enter Name">
+                                    </div>
+                                    <div class="form-group col-sm-10">
+                                            <label class="sr-only" for="exampleInputEmail">Email</label>
+                                            <p class='form_label'>Email</p>
+                                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail" placeholder="Email">
+                                        </div>
+                                    <div class="form-group col-sm-10">
+                                        <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                        <p class='form_label'>Password</p>
+                                        <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                                    </div>
+                                    <div class="form-group col-sm-10">
+                                        <label class="sr-only" for="exampleInputPassword3">Repeat the Password</label>
+                                        <p class='form_label'>Password</p>
+                                        <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Repeat the Password">
+                                    </div>
+                                    
+                                </div>
+                                <div class="form-row">
+                                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary btn-sm ml-1">Create my account</button>        
+                                </div>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="passModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg" role="content">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Registration</h4>
+                            <button type="button" class="close" data-dismiss="modal">
+                                &times;
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-sm-10">
+                                                <label class="sr-only" for="exampleInputName">Name</label>
+                                                <p class='form_label'>Name</p>
+                                                <input type="text" class="form-control form-control-sm mr-1" id="exampleInputName" placeholder="Enter Name">
+                                        </div>
+                                        <div class="form-group col-sm-10">
+                                                <label class="sr-only" for="exampleInputEmail">Email</label>
+                                                <p class='form_label'>Email</p>
+                                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail" placeholder="Email">
+                                            </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="btn btn-primary btn-sm ml-1">Send a password</button>        
+                                    </div>
+                                </form>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
     <div class="container">
     
         <div class="title"> Saint-Petersburg Skater’s Map </div>
@@ -77,18 +166,124 @@
             <div class="col-12 col-sm-2 news">
                 <h2 class="news__title">Latest news</h2>
                 <div class="news__block block">
+                    <div class="news_item">
+                        <div class="news__date col-sm-5 offset-sm-1">
+                         7/10/2019
+                        </div>
+                        <div class="news__message col-sm-10 offset-sm-1">
+                            <h6 class="news_name">Nevsky pr. is closed</h6>
+                            <p class="message">The pr. is closed because of repairing the road.</p>
+                        </div>
+                    </div>
+                    <div class="news_item">
+                        <div class="news__date col-sm-5 offset-sm-1">
+                         3/10/2019
+                        </div>
+                        <div class="news__message col-sm-10 offset-sm-1">
+                            <h6 class="news_name">New good road in the center</h6>
+                            <p class="message">The Kalin str. is repaired!!!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-sm-8">
-                <div class="buttonDir ">
-                    <button class="btn btn-primary">SKATING DIRECTION</button>
+                <div class="buttonDir">
+                    <button id="buttonDir" class="btn btn-primary">SKATING DIRECTION</button>
                 </div>
-                <div class="map"></div>
+                <div id="basicMap" class="map"></div>
                 
             </div>
+
+
+            <div id="skateRouting" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg" role="content">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">SKATING DIRECTION</h4>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    &times;
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-10">
+                                                    <label class="sr-only" for="exampleInputStart">Start</label>
+                                                    <p class='form_label'>Start</p>
+                                                    <input type="text" class="form-control form-control-sm mr-1" id="exampleInputName">
+                                            </div>
+                                            <div class="form-group col-sm-10">
+                                                <label class="sr-only" for="exampleInputPassword3">End</label>
+                                                <p class='form_label'>End</p>
+                                                <input type="text" class="form-control form-control-sm mr-1" id="exampleInputEnd">
+                                            </div>
+                                            <div class="col-sm-auto">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label class="form-check-label"> GOOD roades
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label class="form-check-label"> Show shops
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label class="form-check-label"> Show parks
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label class="form-check-label"> Without High Hills
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox">
+                                                    <label class="form-check-label"> Without Bridges
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                            <button type="routeButton" class="btn btn-primary btn-sm ml-1">Show the Route</button>        
+                                        </div>
+                                    </form>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            
             <div class="col-12 col-sm-2 chat">
                     <h2 class="chat__title">Chat</h2>
-                    <div class="chat__block block"></div>
+                    <div class="chat__block block">
+                        <div class="message__block">
+                            <div class="row chat__item">
+                                <p class="chat__time col-sm-2 offset-sm-1">
+                                 7.03
+                                </p>
+                                <div class="chat__message col-sm-7 offset-sm-1">
+                                    <h6 class="chat_name">Marcus</h6>
+                                    <p class="message">Hey! I'm in the Central park. Who want to skate with me?</p>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="send_message">
+                                <div class="form-row">
+                                    <div class="form-group col-sm-7 offset-sm-1">
+                                            <label class="sr-only" for="exampleInputMessage">Message</label>
+                                            <input type="text" class="form-control form-control-sm" id="exampleInputMessage" placeholder="Enter Message">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button class="sendButton btn btn-sm btn-primary">SEND</button>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                        
+
+                    </div>
             </div>
         
     </div>
@@ -100,7 +295,20 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/js.js"></script>
-  
+    <script src="https://openlayers.org/api/OpenLayers.js"></script>
+    <script>
+      function init() {
+        map = new OpenLayers.Map("basicMap");
+        var mapnik = new OpenLayers.Layer.OSM();
+        map.addLayer(mapnik);
+        map.setCenter(new OpenLayers.LonLat(13.41,52.52) // Center of the map
+          .transform(
+            new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+            new OpenLayers.Projection("EPSG:900913") // to Spherical Mercator Projection
+          ), 15 // Zoom level
+        );
+      }
+    </script>
 </body>
 
 
